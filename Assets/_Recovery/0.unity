@@ -303,23 +303,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   itemSprites:
-  - {fileID: -6707024634718470045, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: -3034113896253870597, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: -5496348777185519883, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: -3136020585630797455, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: -7456231153854171984, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: -1355429578305698445, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: 2778509025668051687, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: 6290856397033522727, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: 3510224064230883630, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: 2849802567498469265, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: -5021216437599779441, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: 2130535880278150251, guid: 007afdd838e53ca4c82797981eaa9814, type: 3}
-  - {fileID: 184950751378207249, guid: 007afdd838e53ca4c82797981eaa9814, type: 3}
-  - {fileID: 5543941588292853863, guid: 007afdd838e53ca4c82797981eaa9814, type: 3}
-  - {fileID: -1863859237976802683, guid: 007afdd838e53ca4c82797981eaa9814, type: 3}
-  - {fileID: 7576617242518483205, guid: 007afdd838e53ca4c82797981eaa9814, type: 3}
-  - {fileID: 7374845061861626600, guid: 007afdd838e53ca4c82797981eaa9814, type: 3}
+  - {fileID: 6491916475305925652, guid: bc0e3870a8926464d849a14be85078fd, type: 3}
+  - {fileID: 7919750047730634564, guid: bc0e3870a8926464d849a14be85078fd, type: 3}
+  - {fileID: 5065768391458761561, guid: bc0e3870a8926464d849a14be85078fd, type: 3}
+  - {fileID: -8517778293071628929, guid: bc0e3870a8926464d849a14be85078fd, type: 3}
+  - {fileID: -7696392297635391799, guid: bc0e3870a8926464d849a14be85078fd, type: 3}
+  - {fileID: 7619221027992080592, guid: bc0e3870a8926464d849a14be85078fd, type: 3}
   itemPrefab: {fileID: 196797935933080150, guid: 990eb5aea68a52247996c21245f74231, type: 3}
 --- !u!4 &614307900
 Transform:
@@ -426,7 +415,7 @@ GameObject:
   - component: {fileID: 1235309872}
   - component: {fileID: 1235309871}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: Game Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,6 +455,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 614307900}
   - {fileID: 907493083}
+  - {fileID: 614307900}
   - {fileID: 1235309872}

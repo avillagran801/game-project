@@ -3,7 +3,6 @@ using UnityEngine.EventSystems;
 
 public class ClickeableItem : MonoBehaviour, IPointerClickHandler
 {
-    public string ItemType;
     private GameManager _gameManager;
     private SpriteRenderer _spriteRenderer;
 
@@ -20,10 +19,9 @@ public class ClickeableItem : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public void Initialize(Sprite newSprite, string newItemType)
+    public void SetDesign(Sprite newSprite)
     {
         _spriteRenderer.sprite = newSprite;
-        ItemType = newItemType;
     }
 
     public void OnPointerClick(PointerEventData eventData)
