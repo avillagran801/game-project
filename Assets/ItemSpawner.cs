@@ -9,7 +9,7 @@ public class ItemSpawner : MonoBehaviour
     private ClickeableItem[] leftItems;
     private ClickeableItem[] rightItems;
 
-    public void Initialize()
+    public void InitializeItems()
     {
         leftItems = new ClickeableItem[numItems];
         rightItems = new ClickeableItem[numItems];
@@ -18,14 +18,18 @@ public class ItemSpawner : MonoBehaviour
         {
             GameObject aux = Instantiate(itemPrefab);
             aux.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
             leftItems[i] = aux.GetComponent<ClickeableItem>();
+            leftItems[i].SetAssignedSlot(0);
         }
 
         for (int i = 0; i < numItems; i++)
         {
             GameObject aux = Instantiate(itemPrefab);
             aux.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
             rightItems[i] = aux.GetComponent<ClickeableItem>();
+            rightItems[i].SetAssignedSlot(1);
         }
     }
 
@@ -81,14 +85,13 @@ public class ItemSpawner : MonoBehaviour
         for (int i = 0; i < numItems - 1; i++)
         {
             // 0, ..., numItems - 2
-            leftItems[i].SetDesign(itemSprites[chosenIndex[i]]);
+            leftItems[i].SetDesign(itemSprites[chosenIndex[i]], false);
 
             // numItems - 1, ..., 2*numItems - 3
-            rightItems[i].SetDesign(itemSprites[chosenIndex[i + numItems - 1]]);
-            Debug.Log(i + numItems - 1);
+            rightItems[i].SetDesign(itemSprites[chosenIndex[i + numItems - 1]], false);
         }
 
-        leftItems[numItems - 1].SetDesign(itemSprites[chosenIndex[uniqueSpritesNeeded - 1]]);
-        rightItems[numItems - 1].SetDesign(itemSprites[chosenIndex[uniqueSpritesNeeded - 1]]);
+        leftItems[numItems - 1].SetDesign(itemSprites[chosenIndex[uniqueSpritesNeeded - 1]], true);
+        rightItems[numItems - 1].SetDesign(itemSprites[chosenIndex[uniqueSpritesNeeded - 1]], true);
     }
 }

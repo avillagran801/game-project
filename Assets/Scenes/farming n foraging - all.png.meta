@@ -267,12 +267,12 @@ TextureImporter:
       name: farming n foraging - all_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 79
-        width: 15
-        height: 18
+        x: 18
+        y: 80
+        width: 13
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -289,12 +289,12 @@ TextureImporter:
       name: farming n foraging - all_1
       rect:
         serializedVersion: 2
-        x: 31
-        y: 79
-        width: 18
-        height: 18
+        x: 32
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -311,12 +311,12 @@ TextureImporter:
       name: farming n foraging - all_2
       rect:
         serializedVersion: 2
-        x: 52
-        y: 85
-        width: 9
-        height: 8
+        x: 53
+        y: 86
+        width: 7
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -333,12 +333,12 @@ TextureImporter:
       name: farming n foraging - all_3
       rect:
         serializedVersion: 2
-        x: 67
-        y: 85
-        width: 9
-        height: 11
+        x: 68
+        y: 86
+        width: 7
+        height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -355,12 +355,12 @@ TextureImporter:
       name: farming n foraging - all_4
       rect:
         serializedVersion: 2
-        x: 83
-        y: 84
-        width: 10
-        height: 17
+        x: 84
+        y: 85
+        width: 8
+        height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -377,12 +377,12 @@ TextureImporter:
       name: farming n foraging - all_5
       rect:
         serializedVersion: 2
-        x: 113
-        y: 79
-        width: 15
-        height: 18
+        x: 114
+        y: 80
+        width: 13
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -399,12 +399,12 @@ TextureImporter:
       name: farming n foraging - all_6
       rect:
         serializedVersion: 2
-        x: 129
-        y: 80
-        width: 15
-        height: 15
+        x: 130
+        y: 81
+        width: 13
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -421,12 +421,12 @@ TextureImporter:
       name: farming n foraging - all_7
       rect:
         serializedVersion: 2
-        x: 149
-        y: 85
-        width: 6
-        height: 7
+        x: 150
+        y: 86
+        width: 4
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -443,12 +443,12 @@ TextureImporter:
       name: farming n foraging - all_8
       rect:
         serializedVersion: 2
-        x: 164
-        y: 84
-        width: 8
-        height: 12
+        x: 165
+        y: 85
+        width: 6
+        height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -465,12 +465,12 @@ TextureImporter:
       name: farming n foraging - all_9
       rect:
         serializedVersion: 2
-        x: 179
-        y: 84
-        width: 10
-        height: 16
+        x: 180
+        y: 85
+        width: 8
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -487,12 +487,12 @@ TextureImporter:
       name: farming n foraging - all_10
       rect:
         serializedVersion: 2
-        x: 209
-        y: 79
-        width: 15
-        height: 18
+        x: 210
+        y: 80
+        width: 13
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -509,12 +509,12 @@ TextureImporter:
       name: farming n foraging - all_11
       rect:
         serializedVersion: 2
-        x: 224
-        y: 81
-        width: 15
-        height: 15
+        x: 225
+        y: 82
+        width: 13
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -531,12 +531,12 @@ TextureImporter:
       name: farming n foraging - all_12
       rect:
         serializedVersion: 2
-        x: 244
-        y: 85
-        width: 9
-        height: 8
+        x: 245
+        y: 86
+        width: 7
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -553,12 +553,12 @@ TextureImporter:
       name: farming n foraging - all_13
       rect:
         serializedVersion: 2
-        x: 258
-        y: 85
-        width: 11
-        height: 12
+        x: 259
+        y: 86
+        width: 9
+        height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -575,12 +575,12 @@ TextureImporter:
       name: farming n foraging - all_14
       rect:
         serializedVersion: 2
-        x: 274
-        y: 85
-        width: 11
-        height: 16
+        x: 275
+        y: 86
+        width: 9
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -597,12 +597,12 @@ TextureImporter:
       name: farming n foraging - all_15
       rect:
         serializedVersion: 2
-        x: 290
-        y: 85
-        width: 12
-        height: 22
+        x: 291
+        y: 86
+        width: 10
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -619,12 +619,12 @@ TextureImporter:
       name: farming n foraging - all_16
       rect:
         serializedVersion: 2
-        x: 17
-        y: 47
-        width: 15
-        height: 18
+        x: 18
+        y: 48
+        width: 13
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -641,12 +641,12 @@ TextureImporter:
       name: farming n foraging - all_17
       rect:
         serializedVersion: 2
-        x: 32
-        y: 49
-        width: 16
-        height: 14
+        x: 33
+        y: 50
+        width: 14
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -663,12 +663,12 @@ TextureImporter:
       name: farming n foraging - all_18
       rect:
         serializedVersion: 2
-        x: 51
-        y: 53
-        width: 9
-        height: 9
+        x: 52
+        y: 54
+        width: 7
+        height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -685,12 +685,12 @@ TextureImporter:
       name: farming n foraging - all_19
       rect:
         serializedVersion: 2
-        x: 66
-        y: 52
-        width: 11
-        height: 12
+        x: 67
+        y: 53
+        width: 9
+        height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -707,12 +707,12 @@ TextureImporter:
       name: farming n foraging - all_20
       rect:
         serializedVersion: 2
-        x: 82
-        y: 52
-        width: 12
-        height: 16
+        x: 83
+        y: 53
+        width: 10
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -729,12 +729,12 @@ TextureImporter:
       name: farming n foraging - all_21
       rect:
         serializedVersion: 2
-        x: 113
-        y: 47
-        width: 15
-        height: 18
+        x: 114
+        y: 48
+        width: 13
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -751,12 +751,12 @@ TextureImporter:
       name: farming n foraging - all_22
       rect:
         serializedVersion: 2
-        x: 128
-        y: 48
-        width: 17
-        height: 17
+        x: 129
+        y: 49
+        width: 15
+        height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -773,12 +773,12 @@ TextureImporter:
       name: farming n foraging - all_23
       rect:
         serializedVersion: 2
-        x: 149
-        y: 53
-        width: 6
-        height: 7
+        x: 150
+        y: 54
+        width: 4
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -795,12 +795,12 @@ TextureImporter:
       name: farming n foraging - all_24
       rect:
         serializedVersion: 2
-        x: 162
-        y: 53
-        width: 11
-        height: 9
+        x: 163
+        y: 54
+        width: 9
+        height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -817,12 +817,12 @@ TextureImporter:
       name: farming n foraging - all_25
       rect:
         serializedVersion: 2
-        x: 178
-        y: 52
-        width: 12
-        height: 16
+        x: 179
+        y: 53
+        width: 10
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -839,12 +839,12 @@ TextureImporter:
       name: farming n foraging - all_26
       rect:
         serializedVersion: 2
-        x: 209
-        y: 47
-        width: 15
-        height: 18
+        x: 210
+        y: 48
+        width: 13
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -861,12 +861,12 @@ TextureImporter:
       name: farming n foraging - all_27
       rect:
         serializedVersion: 2
-        x: 224
-        y: 49
-        width: 16
-        height: 15
+        x: 225
+        y: 50
+        width: 14
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -883,12 +883,12 @@ TextureImporter:
       name: farming n foraging - all_28
       rect:
         serializedVersion: 2
-        x: 244
-        y: 53
-        width: 9
-        height: 7
+        x: 245
+        y: 54
+        width: 7
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -905,12 +905,12 @@ TextureImporter:
       name: farming n foraging - all_29
       rect:
         serializedVersion: 2
-        x: 259
-        y: 53
-        width: 10
-        height: 11
+        x: 260
+        y: 54
+        width: 8
+        height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -927,12 +927,12 @@ TextureImporter:
       name: farming n foraging - all_30
       rect:
         serializedVersion: 2
-        x: 275
-        y: 53
-        width: 10
-        height: 13
+        x: 276
+        y: 54
+        width: 8
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -949,12 +949,12 @@ TextureImporter:
       name: farming n foraging - all_31
       rect:
         serializedVersion: 2
-        x: 291
-        y: 53
-        width: 11
-        height: 17
+        x: 292
+        y: 54
+        width: 9
+        height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -971,12 +971,12 @@ TextureImporter:
       name: farming n foraging - all_32
       rect:
         serializedVersion: 2
-        x: 17
-        y: 15
-        width: 15
-        height: 18
+        x: 18
+        y: 16
+        width: 13
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -993,12 +993,12 @@ TextureImporter:
       name: farming n foraging - all_33
       rect:
         serializedVersion: 2
-        x: 31
-        y: 16
-        width: 17
-        height: 17
+        x: 32
+        y: 17
+        width: 15
+        height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1015,12 +1015,12 @@ TextureImporter:
       name: farming n foraging - all_34
       rect:
         serializedVersion: 2
-        x: 53
-        y: 21
-        width: 6
-        height: 7
+        x: 54
+        y: 22
+        width: 4
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1037,12 +1037,12 @@ TextureImporter:
       name: farming n foraging - all_35
       rect:
         serializedVersion: 2
-        x: 68
-        y: 21
-        width: 8
-        height: 9
+        x: 69
+        y: 22
+        width: 6
+        height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1059,12 +1059,12 @@ TextureImporter:
       name: farming n foraging - all_36
       rect:
         serializedVersion: 2
-        x: 83
-        y: 20
-        width: 10
-        height: 16
+        x: 84
+        y: 21
+        width: 8
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1081,12 +1081,12 @@ TextureImporter:
       name: farming n foraging - all_37
       rect:
         serializedVersion: 2
-        x: 113
-        y: 15
-        width: 15
-        height: 18
+        x: 114
+        y: 16
+        width: 13
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1103,12 +1103,12 @@ TextureImporter:
       name: farming n foraging - all_38
       rect:
         serializedVersion: 2
-        x: 127
-        y: 15
-        width: 17
-        height: 17
+        x: 128
+        y: 16
+        width: 15
+        height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1125,12 +1125,12 @@ TextureImporter:
       name: farming n foraging - all_39
       rect:
         serializedVersion: 2
-        x: 148
-        y: 20
-        width: 9
-        height: 8
+        x: 149
+        y: 21
+        width: 7
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1147,12 +1147,12 @@ TextureImporter:
       name: farming n foraging - all_40
       rect:
         serializedVersion: 2
-        x: 163
-        y: 20
-        width: 10
-        height: 10
+        x: 164
+        y: 21
+        width: 8
+        height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1169,12 +1169,12 @@ TextureImporter:
       name: farming n foraging - all_41
       rect:
         serializedVersion: 2
-        x: 178
-        y: 20
-        width: 12
-        height: 13
+        x: 179
+        y: 21
+        width: 10
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1191,12 +1191,12 @@ TextureImporter:
       name: farming n foraging - all_42
       rect:
         serializedVersion: 2
-        x: 208
-        y: 16
-        width: 16
-        height: 16
+        x: 209
+        y: 17
+        width: 14
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1213,12 +1213,12 @@ TextureImporter:
       name: farming n foraging - all_43
       rect:
         serializedVersion: 2
-        x: 224
-        y: 16
-        width: 16
-        height: 13
+        x: 225
+        y: 17
+        width: 14
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1235,12 +1235,12 @@ TextureImporter:
       name: farming n foraging - all_44
       rect:
         serializedVersion: 2
-        x: 239
-        y: 16
-        width: 17
-        height: 13
+        x: 240
+        y: 17
+        width: 15
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1257,12 +1257,12 @@ TextureImporter:
       name: farming n foraging - all_45
       rect:
         serializedVersion: 2
-        x: 272
-        y: 16
-        width: 16
-        height: 16
+        x: 273
+        y: 17
+        width: 14
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1279,12 +1279,12 @@ TextureImporter:
       name: farming n foraging - all_46
       rect:
         serializedVersion: 2
-        x: 290
-        y: 20
-        width: 12
-        height: 17
+        x: 291
+        y: 21
+        width: 10
+        height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1301,7 +1301,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9df0a32b585b06c4998e286c591028d1
     internalID: 0
     vertices: []
     indices: 
@@ -1309,7 +1309,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       farming n foraging - all_0: 6585551404894131136
       farming n foraging - all_1: -6707024634718470045

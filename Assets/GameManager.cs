@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     public ItemSpawner spawner;
     private Slot leftSlot;
     private Slot rightSlot;
+    private ClickeableItem leftClickedItem;
+    private ClickeableItem rightClickedItem;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,7 +31,7 @@ public class GameManager : MonoBehaviour
         auxSlot = Instantiate(slotPrefab, new Vector2(4, 0), Quaternion.identity);
         rightSlot = auxSlot.GetComponent<Slot>();
 
-        spawner.Initialize();
+        spawner.InitializeItems();
     }
 
     public void SpawnItemsIntoSlot()
@@ -39,6 +41,35 @@ public class GameManager : MonoBehaviour
 
     public void OnItemClicked(ClickeableItem clickedItem)
     {
-        Debug.Log("Clicked item! " + clickedItem.GetEntityId());
+        if (clickedItem.GetAssignedSlot() == 0)
+        {
+            if (leftClickedItem != null)
+            {
+                leftClickedItem.SetBorder(false);
+            }
+
+            leftClickedItem = clickedItem;
+            leftClickedItem.SetBorder(true);
+        }
+        else
+        {
+            if (rightClickedItem != null)
+            {
+                rightClickedItem.SetBorder(false);
+            }
+
+            rightClickedItem = clickedItem;
+            rightClickedItem.SetBorder(true);
+        }
+
+        if (leftClickedItem != null && rightClickedItem != null)
+        {
+            if (leftClickedItem.GetPairValue() && rightClickedItem.GetPairValue())
+            {
+                Debug.Log("Pair clicked!");
+            }
+        }
+
+        // Debug.Log("Clicked item! " + clickedItem.GetEntityId() + ", " + (clickedItem.GetAssignedSlot() == 0 ? "left" : "right") + " slot");
     }
 }
