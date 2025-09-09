@@ -69,7 +69,5 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Pair clicked!");
             }
         }
-
-        // Debug.Log("Clicked item! " + clickedItem.GetEntityId() + ", " + (clickedItem.GetAssignedSlot() == 0 ? "left" : "right") + " slot");
     }
 }

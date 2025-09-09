@@ -5,7 +5,7 @@ public class ItemSpawner : MonoBehaviour
 {
     public Sprite[] itemSprites;
     public GameObject itemPrefab;
-    private int numItems = 5;
+    private int numItems = 6;
     private ClickeableItem[] leftItems;
     private ClickeableItem[] rightItems;
 
@@ -42,12 +42,24 @@ public class ItemSpawner : MonoBehaviour
 
     void AssignItemsPosition(Slot slot, ClickeableItem[] items)
     {
-        float margin = 0.2F;
+        float margin = 0.3f;
         float slotHalfWidth = slot.Size.x / 2f;
         float slotHalfHeight = slot.Size.y / 2f;
 
         for (int i = 0; i < numItems; i++)
         {
+            // 🔹 Apply random rotation (Z axis since it's 2D)
+            float randomPossibility = Random.Range(0, 100);
+            float rotation = 0f;
+
+            if (randomPossibility > 60)
+            {
+                rotation = 90f * Random.Range(1, 4); // 90, 180, 270
+            }
+
+            items[i].transform.rotation = Quaternion.Euler(0f, 0f, rotation);
+
+            // Since we’re not scaling, use the sprite’s default size
             SpriteRenderer itemSR = items[i].GetComponent<SpriteRenderer>();
             float itemHalfWidth = itemSR.bounds.size.x / 2f;
             float itemHalfHeight = itemSR.bounds.size.y / 2f;
@@ -60,6 +72,41 @@ public class ItemSpawner : MonoBehaviour
                 Random.Range(-maxY, maxY)
             );
 
+            bool validPos = false;
+            int attempts = 0;
+
+            while (!validPos && attempts < 50)
+            {
+                localOffset = new Vector2(
+                    Random.Range(-maxX, maxX),
+                    Random.Range(-maxY, maxY)
+                );
+
+                validPos = true;
+
+                // Check overlap with already placed items
+                for (int j = 0; j < i; j++)
+                {
+                    Vector2 otherPos = items[j].transform.localPosition;
+
+                    SpriteRenderer otherSR = items[j].GetComponent<SpriteRenderer>();
+                    float otherHalfWidth = otherSR.bounds.size.x / 2f;
+                    float otherHalfHeight = otherSR.bounds.size.y / 2f;
+
+                    bool overlapX = Mathf.Abs(localOffset.x - otherPos.x) < (itemHalfWidth + otherHalfWidth + margin);
+                    bool overlapY = Mathf.Abs(localOffset.y - otherPos.y) < (itemHalfHeight + otherHalfHeight + margin);
+
+                    if (overlapX && overlapY)
+                    {
+                        validPos = false;
+                        break;
+                    }
+                }
+
+                attempts++;
+            }
+
+            // Assign final position
             items[i].transform.SetParent(slot.transform, false);
             items[i].transform.localPosition = localOffset;
         }

@@ -6,7 +6,7 @@ public class ClickeableItem : MonoBehaviour, IPointerClickHandler
 {
     private GameManager _gameManager;
     private SpriteRenderer _spriteRenderer;
-    private Material _material;
+    // private Material _material;
 
     private Boolean isPair;
     private int assignedSlot; // 0 = left, 1 = right
@@ -17,16 +17,12 @@ public class ClickeableItem : MonoBehaviour, IPointerClickHandler
         // Find the game manager in the scene
         _gameManager = FindAnyObjectByType<GameManager>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        //_material = _spriteRenderer.material;
 
         if (_gameManager == null)
         {
             Debug.LogError("No GameManager found in the scene!");
         }
-
-        _material = _spriteRenderer.material;
-
-        _material.SetColor("_OutlineColor", new Color(0, 0, 0, 0));
-        _material.SetFloat("_OutlineSize", 0f);
     }
 
     public void SetAssignedSlot(int slot)
@@ -53,13 +49,15 @@ public class ClickeableItem : MonoBehaviour, IPointerClickHandler
     {
         if (border)
         {
-            _material.SetColor("_OutlineColor", Color.white); // white border
-            _material.SetFloat("_OutlineSize", 1f);           // 1 pixel thick
+            //_material.SetColor("_GlowColor", Color.white);
+            //_material.SetFloat("_GlowSize", 0.01f); // Start with a small value, adjust in editor
+            //_material.SetFloat("_GlowIntensity", 2.0f); // Adjust this for brightness, e.g., 1.5 to 3.0
         }
         else
         {
-            _material.SetColor("_OutlineColor", new Color(0, 0, 0, 0)); // hide
-            _material.SetFloat("_OutlineSize", 0f);                  // no border
+            //_material.SetColor("_GlowColor", Color.clear);
+            //_material.SetFloat("_GlowSize", 0f);
+            //_material.SetFloat("_GlowIntensity", 0f);
         }
     }
 
