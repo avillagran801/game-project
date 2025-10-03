@@ -1,5 +1,7 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
 
 public class ClickeableItem : MonoBehaviour, IPointerClickHandler
 {
@@ -8,6 +10,7 @@ public class ClickeableItem : MonoBehaviour, IPointerClickHandler
 
     private bool isPair;
     private int assignedSlot; // 0 = left, 1 = right
+    private bool isAxisRotated = false;
 
     void Awake()
     {
@@ -23,6 +26,8 @@ public class ClickeableItem : MonoBehaviour, IPointerClickHandler
     public void SetAssignedSlot(int slot) => assignedSlot = slot;
     public int GetAssignedSlot() => assignedSlot;
     public bool GetPairValue() => isPair;
+    public void SetIsAxisRotated(bool rotated) => isAxisRotated = rotated;
+    public bool GetIsAxisRotated() => isAxisRotated;
 
     public void SetDesign(Sprite newSprite, bool newPairValue)
     {

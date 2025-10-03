@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     private float animationInterval = 2.5f;
     private float animationTimer = 0f;
     private float score = 0;
-    private float startingTime = 15f;
+    private float startingTime = 30f;
     private float remainingTime;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -47,14 +47,14 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            UpdateCountdownText();
-
             if (animationInterval <= animationTimer)
             {
                 animationTimer = 0f;
                 spawner.ChangeItemsPosition();
             }
         }
+
+        UpdateCountdownText();
     }
 
     void UpdateCountdownText()
@@ -69,9 +69,10 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Maqui: " + score.ToString();
     }
 
-    void AddPoints(int amount)
+    void AddPoints()
     {
-        score += amount;
+        score += 1;
+        remainingTime += 5f;
         UpdateScoreText();
     }
 
@@ -102,9 +103,7 @@ public class GameManager : MonoBehaviour
         {
             if (leftClickedItem.GetPairValue() && rightClickedItem.GetPairValue())
             {
-                Debug.Log("Pair clicked!");
-
-                AddPoints(1);
+                AddPoints();
 
                 leftClickedItem = null;
                 rightClickedItem = null;
