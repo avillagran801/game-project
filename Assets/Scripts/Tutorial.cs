@@ -35,7 +35,7 @@ public class Tutorial : MonoBehaviour
             "After a strong earthquake in the south of the country, your little farm has ended up completely upside down: " +
             "the cows are next to the lettuces and your shoes are right next to the eggs. What a mess!" + "\n\n" +
             "To make things easier for yourself and assess the damage, your mission is to group every pair of items you " +
-            "items you come across as quickly as possible."
+            "come across as quickly as possible."
         ));
 
         tutorialPages.Add(new TutorialPage(
