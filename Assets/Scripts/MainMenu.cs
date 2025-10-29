@@ -5,11 +5,22 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync(1);
+        // Run tutorial if tutorial == true
+        if (DataManager.Instance.userData.tutorial)
+        {
+            // Scene 1: Tutorial
+            SceneManager.LoadSceneAsync(1);
+        }
+        else
+        {
+            // Scene 2: Gameplay
+            SceneManager.LoadSceneAsync(2);
+        }
     }
 
     public void Market()
     {
-        SceneManager.LoadSceneAsync(2);
+        // Scene 3: Market
+        SceneManager.LoadSceneAsync(3);
     }
 }

@@ -138,7 +138,6 @@ public class ItemSpawner : MonoBehaviour
         List<int> chosenIndex = new List<int>(chosenSpritesSet);
 
         // Assigns all the unique sprites and the duplicates in each slot
-
         for (int i = 0; i < numItems - 1; i++)
         {
             // 0, ..., numItems - 2

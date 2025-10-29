@@ -9,12 +9,16 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 3631f7c6f942ca949998bd4e0b66d52a
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 33d634403bb5ce34f9392fbc5ebc3afb
+  - enabled: 1
     path: Assets/Scenes/Gameplay.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/Market.unity
     guid: 2f4de1866aaa6c54a8f6de0ec8d80e97
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: b99fbe570151aab42ab773ed6683e3ff, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: eebb21cbd7134c7478a4aec736db7f09, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

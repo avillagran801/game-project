@@ -56,6 +56,7 @@ public class InterfaceManager : MonoBehaviour
 
     public void GoHome()
     {
+        // Scene 0: Main Menu
         SceneManager.LoadSceneAsync(0);
     }
 

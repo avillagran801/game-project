@@ -12,18 +12,19 @@ public class GameManager : MonoBehaviour
     private ClickeableItem leftClickedItem;
     private ClickeableItem rightClickedItem;
     private bool isPlaying = true;
-    private float animationInterval = 2.5f;
+    private float animationInterval = 3f; // 2.5f;
     private float animationTimer = 0f;
     private int score = 0;
     private float startingTime = 10f;
     private float remainingTime;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Initialize and spawn items on each slot
         spawner.InitializeItems(leftSlot.GetComponent<Slot>(), rightSlot.GetComponent<Slot>());
         spawner.SpawnItems();
 
+        // Update the text to score 0 and the start time for the countdown (10 seconds in this case)
         UpdateScoreText();
 
         remainingTime = startingTime;
@@ -37,6 +38,8 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        // While the game is running and there's still time, update the countdown on screen and
+        // spawn the items on different positions inside their assigned slot
         remainingTime -= Time.deltaTime;
         animationTimer += Time.deltaTime;
 
@@ -58,6 +61,7 @@ public class GameManager : MonoBehaviour
 
     void SaveScore()
     {
+        // Save the score inside the JSON file for persistent data
         DataManager.Instance.userData.totalScore += score;
         DataManager.Instance.SaveUserData();
     }
@@ -74,6 +78,7 @@ public class GameManager : MonoBehaviour
 
     public void OnRestart()
     {
+        // Restart the items positions, score and timer just like in the start function
         isPlaying = true;
         spawner.SpawnItems();
 
@@ -86,6 +91,7 @@ public class GameManager : MonoBehaviour
 
     public void OnGameOver()
     {
+        // When the time is over, save the score and open the Game Over screen
         remainingTime = 0f;
         isPlaying = false;
         SaveScore();
@@ -96,6 +102,7 @@ public class GameManager : MonoBehaviour
 
     void UpdateCountdownText()
     {
+        // It updates the UI text component that shows the remaining time on screen
         int seconds = Mathf.FloorToInt(remainingTime);
         int milliseconds = Mathf.FloorToInt((remainingTime - seconds) * 100);
         countdownText.text = string.Format("{0:00}.{1:00}", seconds, milliseconds);
@@ -103,11 +110,13 @@ public class GameManager : MonoBehaviour
 
     void UpdateScoreText()
     {
+        // It updates the UI text component that shows the score on screen
         scoreText.text = score.ToString();
     }
 
     void AddPoints()
     {
+        // Add 1 point to the score and 5 seconds to the remaining time
         score += 1;
         remainingTime += 5f;
         UpdateScoreText();
@@ -115,6 +124,7 @@ public class GameManager : MonoBehaviour
 
     public void OnItemClicked(ClickeableItem clickedItem)
     {
+        // Detects and saves the last clicked item on the left slot
         if (clickedItem.GetAssignedSlot() == 0)
         {
             if (leftClickedItem != null)
@@ -125,6 +135,7 @@ public class GameManager : MonoBehaviour
             leftClickedItem = clickedItem;
             leftClickedItem.SetBorder(true);
         }
+        // Detects and saves the last clicked item on the right slot
         else
         {
             if (rightClickedItem != null)
@@ -136,6 +147,7 @@ public class GameManager : MonoBehaviour
             rightClickedItem.SetBorder(true);
         }
 
+        // If there are items clicked on both sides, it checks if there's a match
         if (leftClickedItem != null && rightClickedItem != null)
         {
             if (leftClickedItem.GetPairValue() && rightClickedItem.GetPairValue())

@@ -6,7 +6,7 @@ public class MarketManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     private int score;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         score = DataManager.Instance.userData.totalScore;
@@ -25,6 +25,7 @@ public class MarketManager : MonoBehaviour
 
     public void GoHome()
     {
+        // Scene 0: Main Menu
         SceneManager.LoadSceneAsync(0);
     }
 }

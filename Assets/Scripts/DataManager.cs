@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class UserData
 {
+  public bool tutorial = true;
   public int totalScore;
   public bool[] availableIconPacks;
 }
@@ -27,7 +28,9 @@ public class DataManager : MonoBehaviour
         GameObject go = new GameObject("DataManager");
         _instance = go.AddComponent<DataManager>();
         DontDestroyOnLoad(go);
-        _instance.Initialize(); // Load file immediately
+
+        // Load file immediately
+        _instance.Initialize();
       }
       return _instance;
     }
@@ -52,6 +55,7 @@ public class DataManager : MonoBehaviour
 
   private void Initialize()
   {
+    // Initialize the paths and load both the user data and settings
     dataPath = Path.Combine(Application.persistentDataPath, "userData.json");
     settingsPath = Path.Combine(Application.persistentDataPath, "userSettings.json");
 
@@ -61,6 +65,7 @@ public class DataManager : MonoBehaviour
 
   public void SaveUserData()
   {
+    // Try to write the last user data on its json file
     try
     {
       string json = JsonUtility.ToJson(userData, true);
@@ -74,6 +79,7 @@ public class DataManager : MonoBehaviour
   }
   public void SaveUserSettings()
   {
+    // Try to write the last user settings on its json file
     try
     {
       string json = JsonUtility.ToJson(userSettings, true);
@@ -88,6 +94,7 @@ public class DataManager : MonoBehaviour
 
   public void LoadUserData()
   {
+    // Try to load the last user data on its json file
     try
     {
       if (File.Exists(dataPath))
@@ -98,6 +105,7 @@ public class DataManager : MonoBehaviour
       }
       else
       {
+        // If theres no json file, create a new one
         Debug.Log("No user data file found, creating new data");
         userData = new UserData();
       }
@@ -111,6 +119,7 @@ public class DataManager : MonoBehaviour
 
   public void LoadUserSettings()
   {
+    // Try to load the last user settings on its json file
     try
     {
       if (File.Exists(settingsPath))
@@ -121,6 +130,7 @@ public class DataManager : MonoBehaviour
       }
       else
       {
+        // If theres no json file, create a new one
         Debug.Log("No user settings file found, creating new settings");
         userSettings = new UserSettings();
       }
@@ -137,6 +147,7 @@ public class DataManager : MonoBehaviour
     if (pause)
     {
       SaveUserData();
+      SaveUserSettings();
     }
   }
   private void OnApplicationQuit()
