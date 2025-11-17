@@ -84,7 +84,7 @@ public class ItemSpawner : MonoBehaviour
 
     void AssignItemsPosition(Slot slot, ClickeableItem[] items)
     {
-        float margin = 0.25f;
+        float margin = 0.30f;
         float slotHalfWidth = slot.Size.x / 2f;
         float slotHalfHeight = slot.Size.y / 2f;
 

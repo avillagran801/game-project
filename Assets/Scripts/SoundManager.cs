@@ -5,7 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class SoundSettings
 {
-    public float effectsVolume = 100;
+    public float effectsVolume = 1f;
+    public float musicVolume = 1f;
 }
 
 public class SoundManager : MonoBehaviour
@@ -32,6 +33,7 @@ public class SoundManager : MonoBehaviour
     public SoundSettings soundSettings = new SoundSettings();
     private string settingsPath;
     private AudioSource effectsSource;
+    private AudioSource musicSource;
 
     void Awake()
     {
@@ -52,27 +54,73 @@ public class SoundManager : MonoBehaviour
 
         effectsSource = gameObject.AddComponent<AudioSource>();
         effectsSource.playOnAwake = false;
-        effectsSource.volume = soundSettings.effectsVolume / 100f;
+
+        musicSource = gameObject.AddComponent<AudioSource>();
+        musicSource.playOnAwake = false;
+
+        LoadSoundSettings();
+    }
+
+    public void LoadSoundSettings()
+    {
+        // Try to load the last user settings on its json file
+        try
+        {
+            if (File.Exists(settingsPath))
+            {
+                string json = File.ReadAllText(settingsPath);
+                soundSettings = JsonUtility.FromJson<SoundSettings>(json);
+
+                effectsSource.volume = soundSettings.effectsVolume;
+                musicSource.volume = soundSettings.musicVolume;
+                Debug.Log("Sound settings loaded from file");
+            }
+            else
+            {
+                // If theres no json file, create a new one
+                Debug.Log("No sound settings file found, creating new settings");
+                soundSettings = new SoundSettings();
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"Error loading user settings: {ex.Message}");
+            soundSettings = new SoundSettings();
+        }
     }
 
     public void SaveSoundSettings()
     {
-        // Try to write the last user settings on its json file
+        // Try to write the last sound settings on its json file
         try
         {
             string json = JsonUtility.ToJson(soundSettings, true);
             File.WriteAllText(settingsPath, json);
-            Debug.Log("User settings saved to " + settingsPath);
+            Debug.Log("Sound settings saved to " + settingsPath);
         }
         catch (Exception ex)
         {
-            Debug.LogError($"Error saving user settings: {ex.Message}");
+            Debug.LogError($"Error saving sound settings: {ex.Message}");
         }
     }
 
     public void PlayEffect(AudioClip clip)
     {
         effectsSource.PlayOneShot(clip);
+    }
+
+    public void ChangeEffectsVolume(float volume)
+    {
+        soundSettings.effectsVolume = volume;
+        effectsSource.volume = volume;
+        SaveSoundSettings();
+    }
+
+    public void ChangeMusicVolume(float volume)
+    {
+        soundSettings.musicVolume = volume;
+        musicSource.volume = volume;
+        SaveSoundSettings();
     }
 
 }

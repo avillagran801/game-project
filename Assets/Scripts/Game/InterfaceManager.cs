@@ -6,8 +6,10 @@ public class InterfaceManager : MonoBehaviour
     public GameObject GameManager;
     public GameObject GameplayObjects;
     public GameObject InformationBar;
+    public GameObject PausePanel;
     public GameObject SettingsPanel;
     public GameObject GameOverPanel;
+
     public TextMeshProUGUI gameOverScoreText;
     public AudioClip selectSound;
     private static InterfaceManager _instance;
@@ -22,7 +24,7 @@ public class InterfaceManager : MonoBehaviour
         _instance = this;
     }
 
-    public void OpenSettings()
+    public void OpenPause()
     {
         SoundManager.Instance.PlayEffect(selectSound);
 
@@ -31,8 +33,9 @@ public class InterfaceManager : MonoBehaviour
         GameplayObjects.SetActive(false);
         InformationBar.SetActive(false);
         GameOverPanel.SetActive(false);
+        SettingsPanel.SetActive(false);
 
-        SettingsPanel.SetActive(true);
+        PausePanel.SetActive(true);
     }
 
     public void ContinueGame()
@@ -40,6 +43,7 @@ public class InterfaceManager : MonoBehaviour
         SoundManager.Instance.PlayEffect(selectSound);
 
         GameOverPanel.SetActive(false);
+        PausePanel.SetActive(false);
         SettingsPanel.SetActive(false);
 
         GameplayObjects.SetActive(true);
@@ -53,6 +57,7 @@ public class InterfaceManager : MonoBehaviour
         SoundManager.Instance.PlayEffect(selectSound);
 
         GameOverPanel.SetActive(false);
+        PausePanel.SetActive(false);
         SettingsPanel.SetActive(false);
 
         GameplayObjects.SetActive(true);
@@ -72,11 +77,37 @@ public class InterfaceManager : MonoBehaviour
     {
         GameplayObjects.SetActive(false);
         InformationBar.SetActive(false);
+        PausePanel.SetActive(false);
         SettingsPanel.SetActive(false);
 
         gameOverScoreText.text = "You got " + GameManager.GetComponent<GameManager>().scoreText.text + " maqui points";
 
         GameOverPanel.SetActive(true);
+    }
+
+    public void OpenSettings()
+    {
+        SoundManager.Instance.PlayEffect(selectSound);
+
+        GameManager.GetComponent<GameManager>().OnPause();
+
+        GameplayObjects.SetActive(false);
+        InformationBar.SetActive(false);
+        GameOverPanel.SetActive(false);
+        PausePanel.SetActive(false);
+
+        SettingsPanel.SetActive(true);
+    }
+
+    public void OnEffectsSliderValueChanged(float value)
+    {
+        SoundManager.Instance.ChangeEffectsVolume(value);
+        SoundManager.Instance.PlayEffect(selectSound);
+    }
+
+    public void OnMusicSliderValueChanged(float value)
+    {
+        SoundManager.Instance.ChangeMusicVolume(value);
     }
 
 }

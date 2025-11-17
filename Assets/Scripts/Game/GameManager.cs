@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject interfaceManager;
     public AudioClip scoreSound;
     public AudioClip incorrectSound;
+    public AudioClip gameOverSound;
     private ClickeableItem leftClickedItem;
     private ClickeableItem rightClickedItem;
     private bool isPlaying = true;
@@ -97,8 +98,8 @@ public class GameManager : MonoBehaviour
         remainingTime = 0f;
         isPlaying = false;
         SaveScore();
-        Debug.Log("Game finished!");
 
+        SoundManager.Instance.PlayEffect(gameOverSound);
         interfaceManager.GetComponent<InterfaceManager>().OpenGameOver();
     }
 
@@ -121,6 +122,9 @@ public class GameManager : MonoBehaviour
         // Add 1 point to the score and 5 seconds to the remaining time
         score += 1;
         UpdateScoreText();
+
+        // Prevent animation bug
+        animationTimer = 0f;
 
         // Max remaining time is 60 seconds
         if (remainingTime + 5f < 60f)
