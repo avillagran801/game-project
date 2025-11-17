@@ -10,17 +10,18 @@ public class MarketManager : MonoBehaviour
     public GameObject centerIconRender;
     public GameObject rightIconRender;
     public TextMeshProUGUI priceText;
-
     public GameObject price;
     public GameObject circleIcon;
     public GameObject checkIcon;
     public GameObject buyButton;
-
+    public AudioClip selectSound;
+    public AudioClip buySound;
+    public AudioClip errorSound;
     private int score;
     private IconPack[] iconPacks;
     private int index = 0;
 
-    void Awake()
+    void Start()
     {
         score = DataManager.Instance.userData.totalScore;
         iconPacks = DataManager.Instance.allIconPacks;
@@ -56,12 +57,14 @@ public class MarketManager : MonoBehaviour
 
     public void leftClick()
     {
+        SoundManager.Instance.PlayEffect(selectSound);
         index = (index - 1 + iconPacks.Length) % iconPacks.Length;
         SetPreviewIcon();
     }
 
     public void rightClick()
     {
+        SoundManager.Instance.PlayEffect(selectSound);
         index = (index + 1) % iconPacks.Length;
         SetPreviewIcon();
     }
@@ -75,15 +78,22 @@ public class MarketManager : MonoBehaviour
 
             DataManager.Instance.SaveUserData();
 
+            SoundManager.Instance.PlayEffect(buySound);
+
             score = DataManager.Instance.userData.totalScore;
 
             UpdateScoreText();
             SetBoughtIcon(true);
         }
+        else
+        {
+            SoundManager.Instance.PlayEffect(errorSound);
+        }
     }
 
     public void GoHome()
     {
+        SoundManager.Instance.PlayEffect(selectSound);
         // Scene 0: Main Menu
         SceneManager.LoadSceneAsync(0);
     }

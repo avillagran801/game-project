@@ -9,6 +9,7 @@ public class InterfaceManager : MonoBehaviour
     public GameObject SettingsPanel;
     public GameObject GameOverPanel;
     public TextMeshProUGUI gameOverScoreText;
+    public AudioClip selectSound;
     private static InterfaceManager _instance;
     void Awake()
     {
@@ -23,6 +24,8 @@ public class InterfaceManager : MonoBehaviour
 
     public void OpenSettings()
     {
+        SoundManager.Instance.PlayEffect(selectSound);
+
         GameManager.GetComponent<GameManager>().OnPause();
 
         GameplayObjects.SetActive(false);
@@ -34,6 +37,8 @@ public class InterfaceManager : MonoBehaviour
 
     public void ContinueGame()
     {
+        SoundManager.Instance.PlayEffect(selectSound);
+
         GameOverPanel.SetActive(false);
         SettingsPanel.SetActive(false);
 
@@ -45,6 +50,8 @@ public class InterfaceManager : MonoBehaviour
 
     public void RestartGame()
     {
+        SoundManager.Instance.PlayEffect(selectSound);
+
         GameOverPanel.SetActive(false);
         SettingsPanel.SetActive(false);
 
@@ -56,6 +63,7 @@ public class InterfaceManager : MonoBehaviour
 
     public void GoHome()
     {
+        SoundManager.Instance.PlayEffect(selectSound);
         // Scene 0: Main Menu
         SceneManager.LoadSceneAsync(0);
     }

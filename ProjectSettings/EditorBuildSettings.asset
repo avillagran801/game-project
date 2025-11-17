@@ -18,7 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Market.unity
     guid: 2f4de1866aaa6c54a8f6de0ec8d80e97
   m_configObjects:
-    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: b99fbe570151aab42ab773ed6683e3ff, type: 2}
-    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: eebb21cbd7134c7478a4aec736db7f09, type: 2}
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 87ea052b4fad89e448ab08a7ebafde92, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 738ae2364b7928b46ac0217dc22427eb, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 4a25965b6839448498b2280ab781708f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

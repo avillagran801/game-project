@@ -9,13 +9,15 @@ public class GameManager : MonoBehaviour
     public GameObject leftSlot;
     public GameObject rightSlot;
     public GameObject interfaceManager;
+    public AudioClip scoreSound;
+    public AudioClip incorrectSound;
     private ClickeableItem leftClickedItem;
     private ClickeableItem rightClickedItem;
     private bool isPlaying = true;
     private float animationInterval = 3f; // 2.5f;
     private float animationTimer = 0f;
     private int score = 0;
-    private float startingTime = 20f;
+    private float startingTime = 15f;
     private float remainingTime;
 
     void Start()
@@ -118,8 +120,20 @@ public class GameManager : MonoBehaviour
     {
         // Add 1 point to the score and 5 seconds to the remaining time
         score += 1;
-        remainingTime += 5f;
         UpdateScoreText();
+
+        // Max remaining time is 60 seconds
+        if (remainingTime + 5f < 60f)
+        {
+            remainingTime += 5f;
+        }
+        else
+        {
+            remainingTime = 60f;
+        }
+
+        Vibrate(100);
+        SoundManager.Instance.PlayEffect(scoreSound);
     }
 
     public void OnItemClicked(ClickeableItem clickedItem)
@@ -158,6 +172,40 @@ public class GameManager : MonoBehaviour
                 rightClickedItem = null;
                 spawner.SpawnItems();
             }
+            // ADD LOGIC HERE!!!!!!!!!!!!!!
+            /*
+            else
+            {
+                //SoundManager.Instance.PlayEffect(incorrectSound);
+            }
+            */
         }
     }
+
+    public static void Vibrate(long milliseconds)
+    {
+        /*
+#if UNITY_ANDROID && !UNITY_EDITOR
+        try
+        {
+            using (var unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+            using (var currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity"))
+            using (var vibrator = currentActivity.Call<AndroidJavaObject>("getSystemService", "vibrator"))
+            {
+                if (vibrator != null)
+                {
+                    vibrator.Call("vibrate", milliseconds);
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogWarning("Vibration failed: " + e.Message);
+        }
+#else
+        Debug.Log("Vibration called (ignored in editor)");
+#endif
+*/
+    }
+
 }

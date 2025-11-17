@@ -507,6 +507,7 @@ MonoBehaviour:
   SettingsPanel: {fileID: 1941324659}
   GameOverPanel: {fileID: 708577910}
   gameOverScoreText: {fileID: 1629978210}
+  selectSound: {fileID: 8300000, guid: 6c3a8da27ee4ae5409c38169bcea3a75, type: 3}
 --- !u!4 &515931162
 Transform:
   m_ObjectHideFlags: 0
@@ -622,10 +623,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.19033816
+    y: 0.016085792
+    width: 0.6183575
+    height: 0.9651475
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -1209,30 +1210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 539776fed7fa6f44288208fb0ae8e78a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  itemSprites:
-  - {fileID: -6707024634718470045, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: -3034113896253870597, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: -5496348777185519883, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: -3136020585630797455, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: -7456231153854171984, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: -1355429578305698445, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: 2778509025668051687, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: 6290856397033522727, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: 3510224064230883630, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: 2849802567498469265, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: -5021216437599779441, guid: 62df5a95b2fc08b4290de90664da967c, type: 3}
-  - {fileID: 2130535880278150251, guid: 007afdd838e53ca4c82797981eaa9814, type: 3}
-  - {fileID: 184950751378207249, guid: 007afdd838e53ca4c82797981eaa9814, type: 3}
-  - {fileID: 5543941588292853863, guid: 007afdd838e53ca4c82797981eaa9814, type: 3}
-  - {fileID: -1863859237976802683, guid: 007afdd838e53ca4c82797981eaa9814, type: 3}
-  - {fileID: 7576617242518483205, guid: 007afdd838e53ca4c82797981eaa9814, type: 3}
-  - {fileID: 7374845061861626600, guid: 007afdd838e53ca4c82797981eaa9814, type: 3}
-  - {fileID: 9156854346723684101, guid: 29c2249cd00b54c4f9ecbb3c88d7942e, type: 3}
-  - {fileID: 6406061711972274550, guid: 29c2249cd00b54c4f9ecbb3c88d7942e, type: 3}
-  - {fileID: 900668292290427548, guid: 29c2249cd00b54c4f9ecbb3c88d7942e, type: 3}
-  - {fileID: -1181076974519126152, guid: 29c2249cd00b54c4f9ecbb3c88d7942e, type: 3}
-  - {fileID: 7704282712893456000, guid: 29c2249cd00b54c4f9ecbb3c88d7942e, type: 3}
-  - {fileID: -1915776564401465818, guid: 29c2249cd00b54c4f9ecbb3c88d7942e, type: 3}
   itemPrefab: {fileID: 196797935933080150, guid: 990eb5aea68a52247996c21245f74231, type: 3}
 --- !u!4 &614307900
 Transform:
@@ -1260,7 +1237,6 @@ GameObject:
   - component: {fileID: 708577914}
   - component: {fileID: 708577913}
   - component: {fileID: 708577912}
-  - component: {fileID: 708577911}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
@@ -1268,18 +1244,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &708577911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708577910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a0bd8e1be292349855bb5fff8522a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!114 &708577912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2460,6 +2424,8 @@ MonoBehaviour:
   leftSlot: {fileID: 2038259278}
   rightSlot: {fileID: 1678808169}
   interfaceManager: {fileID: 515931160}
+  scoreSound: {fileID: 8300000, guid: ffb52f97d0b884d49877e94944b01537, type: 3}
+  incorrectSound: {fileID: 8300000, guid: 70ddbf77df66344488bc65ab0cf43c25, type: 3}
 --- !u!4 &1235309872
 Transform:
   m_ObjectHideFlags: 0
@@ -3249,7 +3215,6 @@ GameObject:
   - component: {fileID: 1941324660}
   - component: {fileID: 1941324662}
   - component: {fileID: 1941324661}
-  - component: {fileID: 1941324663}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -3319,18 +3284,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941324659}
   m_CullTransparentMesh: 1
---- !u!114 &1941324663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941324659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a0bd8e1be292349855bb5fff8522a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1 &1962363674
 GameObject:
   m_ObjectHideFlags: 0

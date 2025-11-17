@@ -97,12 +97,23 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.adaptiveperformance": {
-      "version": "5.1.5",
-      "depth": 1,
+      "version": "5.1.6",
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.profiling.core": "1.0.2",
         "com.unity.modules.subsystems": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.adaptiveperformance.google.android": {
+      "version": "5.1.6",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.androidjni": "1.0.0",
+        "com.unity.modules.subsystems": "1.0.0",
+        "com.unity.adaptiveperformance": "5.1.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -162,9 +173,9 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {
-        "com.unity.mobile.android-logcat": "1.4.5",
-        "com.unity.adaptiveperformance": "5.1.5",
-        "com.unity.mobile.notifications": "2.4.1"
+        "com.unity.mobile.android-logcat": "1.4.6",
+        "com.unity.adaptiveperformance": "5.1.6",
+        "com.unity.mobile.notifications": "2.4.2"
       }
     },
     "com.unity.ide.rider": {
@@ -202,14 +213,14 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.mobile.android-logcat": {
-      "version": "1.4.5",
+      "version": "1.4.6",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.mobile.notifications": {
-      "version": "2.4.1",
+      "version": "2.4.2",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -234,7 +245,7 @@
     },
     "com.unity.profiling.core": {
       "version": "1.0.2",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
