@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 
@@ -10,9 +9,6 @@ public class GameManager : MonoBehaviour
     public GameObject leftSlot;
     public GameObject rightSlot;
     public GameObject interfaceManager;
-    public AudioClip scoreSound;
-    public AudioClip incorrectSound;
-    public AudioClip gameOverSound;
     private ClickeableItem leftClickedItem;
     private ClickeableItem rightClickedItem;
     private bool isPlaying = true;
@@ -20,10 +16,14 @@ public class GameManager : MonoBehaviour
     private float animationTimer = 0f;
     private int score = 0;
     private float startingTime = 15f;
+    private float addTime = 2f;
+    private float maxTime = 60f;
     private float remainingTime;
 
     void Start()
     {
+        SoundManager.Instance.PlayGameMusic();
+
         // Initialize and spawn items on each slot
         spawner.InitializeItems(leftSlot.GetComponent<Slot>(), rightSlot.GetComponent<Slot>());
         spawner.SpawnItems();
@@ -72,16 +72,20 @@ public class GameManager : MonoBehaviour
 
     public void OnPause()
     {
+        SoundManager.Instance.StopGameMusic();
         isPlaying = false;
     }
 
     public void OnContinue()
     {
+        SoundManager.Instance.PlayGameMusic();
         isPlaying = true;
     }
 
     public void OnRestart()
     {
+        SoundManager.Instance.PlayGameMusic();
+
         // Restart the items positions, score and timer just like in the start function
         isPlaying = true;
         spawner.SpawnItems();
@@ -95,12 +99,14 @@ public class GameManager : MonoBehaviour
 
     public void OnGameOver()
     {
+        SoundManager.Instance.PlayGameMusic();
+        SoundManager.Instance.PlayGameOverEffect();
+
         // When the time is over, save the score and open the Game Over screen
         remainingTime = 0f;
         isPlaying = false;
         SaveScore();
 
-        SoundManager.Instance.PlayEffect(gameOverSound);
         interfaceManager.GetComponent<InterfaceManager>().OpenGameOver();
     }
 
@@ -119,7 +125,11 @@ public class GameManager : MonoBehaviour
     }
 
     void AddPoints()
+
     {
+        Vibrate(100);
+        SoundManager.Instance.PlayScoreEffect();
+
         // Add 1 point to the score and 5 seconds to the remaining time
         score += 1;
         UpdateScoreText();
@@ -128,17 +138,14 @@ public class GameManager : MonoBehaviour
         animationTimer = 0f;
 
         // Max remaining time is 60 seconds
-        if (remainingTime + 5f < 60f)
+        if (remainingTime + addTime < maxTime)
         {
-            remainingTime += 5f;
+            remainingTime += addTime;
         }
         else
         {
-            remainingTime = 60f;
+            remainingTime = maxTime;
         }
-
-        Vibrate(100);
-        SoundManager.Instance.PlayEffect(scoreSound);
     }
 
     public void OnItemClicked(ClickeableItem clickedItem)

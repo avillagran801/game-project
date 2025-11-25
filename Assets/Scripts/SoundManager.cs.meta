@@ -1,2 +1,17 @@
 fileFormatVersion: 2
 guid: 6a74ee6010f26354dab2db4950e5ebf6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - selectSound: {fileID: 8300000, guid: 6c3a8da27ee4ae5409c38169bcea3a75, type: 3}
+  - scoreSound: {fileID: 8300000, guid: ffb52f97d0b884d49877e94944b01537, type: 3}
+  - incorrectSound: {fileID: 8300000, guid: 70ddbf77df66344488bc65ab0cf43c25, type: 3}
+  - gameOverSound: {fileID: 8300000, guid: 2711d06505ae7d145bb0b1c46cd1cb7c, type: 3}
+  - buySound: {fileID: 8300000, guid: 8b651c7053816744c89574b5552540f2, type: 3}
+  - gameMusic: {fileID: 8300000, guid: d7f03a9cae6292a48886baa1b91c43ff, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

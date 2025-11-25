@@ -3,12 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class Settings : MonoBehaviour
 {
-    public AudioClip selectSound;
-
     public void OnEffectsSliderValueChanged(float value)
     {
         SoundManager.Instance.ChangeEffectsVolume(value);
-        SoundManager.Instance.PlayEffect(selectSound);
+        SoundManager.Instance.PlaySelectEffect();
     }
 
     public void OnMusicSliderValueChanged(float value)
@@ -18,7 +16,7 @@ public class Settings : MonoBehaviour
 
     public void GoHome()
     {
-        SoundManager.Instance.PlayEffect(selectSound);
+        SoundManager.Instance.PlaySelectEffect();
         // Scene 0: Main Menu
         SceneManager.LoadSceneAsync(0);
     }

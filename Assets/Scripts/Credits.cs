@@ -23,7 +23,6 @@ public class Credits : MonoBehaviour
     public GameObject nextButton;
     public GameObject backButton;
     public GameObject homeButton;
-    public AudioClip selectSound;
     private List<CreditPage> creditPages = new List<CreditPage>();
     private int currentIndex = 0;
 
@@ -72,7 +71,7 @@ public class Credits : MonoBehaviour
     {
         if (currentIndex < creditPages.Count - 1)
         {
-            SoundManager.Instance.PlayEffect(selectSound);
+            SoundManager.Instance.PlaySelectEffect();
 
             currentIndex++;
             ShowPage(currentIndex);
@@ -93,7 +92,7 @@ public class Credits : MonoBehaviour
     {
         if (currentIndex > 0)
         {
-            SoundManager.Instance.PlayEffect(selectSound);
+            SoundManager.Instance.PlaySelectEffect();
 
             currentIndex--;
             ShowPage(currentIndex);
@@ -112,7 +111,7 @@ public class Credits : MonoBehaviour
 
     public void GoHome()
     {
-        SoundManager.Instance.PlayEffect(selectSound);
+        SoundManager.Instance.PlaySelectEffect();
 
         SceneManager.LoadSceneAsync(0);
     }

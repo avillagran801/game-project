@@ -25,7 +25,6 @@ public class Tutorial : MonoBehaviour
     public GameObject backButton;
     public GameObject playButton;
     public GameObject gameIconsExplanation;
-    public AudioClip selectSound;
     private List<TutorialPage> tutorialPages = new List<TutorialPage>();
     private int currentIndex = 0;
 
@@ -86,7 +85,7 @@ public class Tutorial : MonoBehaviour
     {
         if (currentIndex < tutorialPages.Count - 1)
         {
-            SoundManager.Instance.PlayEffect(selectSound);
+            SoundManager.Instance.PlaySelectEffect();
 
             currentIndex++;
             ShowPage(currentIndex);
@@ -107,7 +106,7 @@ public class Tutorial : MonoBehaviour
     {
         if (currentIndex > 0)
         {
-            SoundManager.Instance.PlayEffect(selectSound);
+            SoundManager.Instance.PlaySelectEffect();
 
             currentIndex--;
             ShowPage(currentIndex);
@@ -127,7 +126,7 @@ public class Tutorial : MonoBehaviour
 
     public void PlayGame()
     {
-        SoundManager.Instance.PlayEffect(selectSound);
+        SoundManager.Instance.PlaySelectEffect();
 
         // Deactivate the tutorial for the next gameplay
         DataManager.Instance.userData.tutorial = false;

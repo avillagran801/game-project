@@ -1405,6 +1405,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943667801}
   m_CullTransparentMesh: 1
+--- !u!1 &948990923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 948990925}
+  - component: {fileID: 948990924}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &948990924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948990923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a74ee6010f26354dab2db4950e5ebf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundManager
+  soundSettings:
+    effectsVolume: 1
+    musicVolume: 1
+  selectSound: {fileID: 8300000, guid: 6c3a8da27ee4ae5409c38169bcea3a75, type: 3}
+  scoreSound: {fileID: 8300000, guid: ffb52f97d0b884d49877e94944b01537, type: 3}
+  incorrectSound: {fileID: 8300000, guid: 70ddbf77df66344488bc65ab0cf43c25, type: 3}
+  gameOverSound: {fileID: 8300000, guid: 2711d06505ae7d145bb0b1c46cd1cb7c, type: 3}
+  buySound: {fileID: 8300000, guid: 8b651c7053816744c89574b5552540f2, type: 3}
+  gameMusic: {fileID: 8300000, guid: d7f03a9cae6292a48886baa1b91c43ff, type: 3}
+--- !u!4 &948990925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948990923}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.08169, y: 0.71954, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1224318630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,7 +1540,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1224318633}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1564931225}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: Settings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1224318633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1915,3 +1980,4 @@ SceneRoots:
   - {fileID: 1564931226}
   - {fileID: 887500264}
   - {fileID: 1247825850}
+  - {fileID: 948990925}

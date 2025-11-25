@@ -11,7 +11,6 @@ public class InterfaceManager : MonoBehaviour
     public GameObject GameOverPanel;
 
     public TextMeshProUGUI gameOverScoreText;
-    public AudioClip selectSound;
     private static InterfaceManager _instance;
     void Awake()
     {
@@ -26,7 +25,7 @@ public class InterfaceManager : MonoBehaviour
 
     public void OpenPause()
     {
-        SoundManager.Instance.PlayEffect(selectSound);
+        SoundManager.Instance.PlaySelectEffect();
 
         GameManager.GetComponent<GameManager>().OnPause();
 
@@ -40,7 +39,7 @@ public class InterfaceManager : MonoBehaviour
 
     public void ContinueGame()
     {
-        SoundManager.Instance.PlayEffect(selectSound);
+        SoundManager.Instance.PlaySelectEffect();
 
         GameOverPanel.SetActive(false);
         PausePanel.SetActive(false);
@@ -54,7 +53,7 @@ public class InterfaceManager : MonoBehaviour
 
     public void RestartGame()
     {
-        SoundManager.Instance.PlayEffect(selectSound);
+        SoundManager.Instance.PlaySelectEffect();
 
         GameOverPanel.SetActive(false);
         PausePanel.SetActive(false);
@@ -68,7 +67,7 @@ public class InterfaceManager : MonoBehaviour
 
     public void GoHome()
     {
-        SoundManager.Instance.PlayEffect(selectSound);
+        SoundManager.Instance.PlaySelectEffect();
         // Scene 0: Main Menu
         SceneManager.LoadSceneAsync(0);
     }
@@ -87,7 +86,7 @@ public class InterfaceManager : MonoBehaviour
 
     public void OpenSettings()
     {
-        SoundManager.Instance.PlayEffect(selectSound);
+        SoundManager.Instance.PlaySelectEffect();
 
         GameManager.GetComponent<GameManager>().OnPause();
 
@@ -102,7 +101,7 @@ public class InterfaceManager : MonoBehaviour
     public void OnEffectsSliderValueChanged(float value)
     {
         SoundManager.Instance.ChangeEffectsVolume(value);
-        SoundManager.Instance.PlayEffect(selectSound);
+        SoundManager.Instance.PlaySelectEffect();
     }
 
     public void OnMusicSliderValueChanged(float value)

@@ -31,6 +31,12 @@ public class SoundManager : MonoBehaviour
     }
 
     public SoundSettings soundSettings = new SoundSettings();
+    public AudioClip selectSound;
+    public AudioClip scoreSound;
+    public AudioClip incorrectSound;
+    public AudioClip gameOverSound;
+    public AudioClip buySound;
+    public AudioClip gameMusic;
     private string settingsPath;
     private AudioSource effectsSource;
     private AudioSource musicSource;
@@ -107,6 +113,49 @@ public class SoundManager : MonoBehaviour
     public void PlayEffect(AudioClip clip)
     {
         effectsSource.PlayOneShot(clip);
+    }
+
+    public void PlaySelectEffect()
+    {
+        effectsSource.PlayOneShot(selectSound);
+    }
+
+    public void PlayIncorrectEffect()
+    {
+        effectsSource.PlayOneShot(incorrectSound);
+    }
+
+    public void PlayGameOverEffect()
+    {
+        effectsSource.PlayOneShot(gameOverSound);
+    }
+
+    public void PlayScoreEffect()
+    {
+        effectsSource.PlayOneShot(scoreSound);
+    }
+
+    public void PlayBuyEffect()
+    {
+        effectsSource.PlayOneShot(buySound);
+    }
+
+    public void PlayGameMusic()
+    {
+        if (gameMusic == null)
+        {
+            Debug.LogWarning("No gameMusic AudioClip assigned!");
+            return;
+        }
+
+        musicSource.clip = gameMusic;
+        musicSource.loop = true;
+        musicSource.Play();
+    }
+
+    public void StopGameMusic()
+    {
+        musicSource.Stop();
     }
 
     public void ChangeEffectsVolume(float volume)

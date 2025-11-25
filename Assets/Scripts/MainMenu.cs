@@ -3,10 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public AudioClip selectSound;
     public void PlayGame()
     {
-        SoundManager.Instance.PlayEffect(selectSound);
+        SoundManager.Instance.PlaySelectEffect();
 
         // Run tutorial if tutorial == true
         if (DataManager.Instance.userData.tutorial)
@@ -23,21 +22,21 @@ public class MainMenu : MonoBehaviour
 
     public void Market()
     {
-        SoundManager.Instance.PlayEffect(selectSound);
+        SoundManager.Instance.PlaySelectEffect();
         // Scene 3: Market
         SceneManager.LoadSceneAsync(3);
     }
 
     public void Credits()
     {
-        SoundManager.Instance.PlayEffect(selectSound);
+        SoundManager.Instance.PlaySelectEffect();
         // Scene 4: Credits
         SceneManager.LoadSceneAsync(4);
     }
 
     public void Settings()
     {
-        SoundManager.Instance.PlayEffect(selectSound);
+        SoundManager.Instance.PlaySelectEffect();
         // Scene 5: Settings
         SceneManager.LoadSceneAsync(5);
     }
