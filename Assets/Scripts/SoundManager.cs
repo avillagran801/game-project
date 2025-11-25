@@ -162,14 +162,14 @@ public class SoundManager : MonoBehaviour
     {
         soundSettings.effectsVolume = volume;
         effectsSource.volume = volume;
-        SaveSoundSettings();
+        // SaveSoundSettings();
     }
 
     public void ChangeMusicVolume(float volume)
     {
         soundSettings.musicVolume = volume;
         musicSource.volume = volume;
-        SaveSoundSettings();
+        // SaveSoundSettings();
     }
 
 }

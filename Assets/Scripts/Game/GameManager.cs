@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
 
     public void OnGameOver()
     {
-        SoundManager.Instance.PlayGameMusic();
+        SoundManager.Instance.StopGameMusic();
         SoundManager.Instance.PlayGameOverEffect();
 
         // When the time is over, save the score and open the Game Over screen

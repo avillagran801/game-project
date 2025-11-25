@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 public class InterfaceManager : MonoBehaviour
 {
     public GameObject GameManager;
@@ -11,6 +12,8 @@ public class InterfaceManager : MonoBehaviour
     public GameObject GameOverPanel;
 
     public TextMeshProUGUI gameOverScoreText;
+    public Slider effectsSlider;
+    public Slider musicSlider;
     private static InterfaceManager _instance;
     void Awake()
     {
@@ -21,6 +24,12 @@ public class InterfaceManager : MonoBehaviour
         }
 
         _instance = this;
+    }
+
+    void Start()
+    {
+        effectsSlider.value = SoundManager.Instance.soundSettings.effectsVolume;
+        musicSlider.value = SoundManager.Instance.soundSettings.musicVolume;
     }
 
     public void OpenPause()
@@ -96,6 +105,12 @@ public class InterfaceManager : MonoBehaviour
         PausePanel.SetActive(false);
 
         SettingsPanel.SetActive(true);
+    }
+
+    public void CloseSettings()
+    {
+        SoundManager.Instance.SaveSoundSettings();
+        OpenPause();
     }
 
     public void OnEffectsSliderValueChanged(float value)
