@@ -84,34 +84,43 @@ public class ItemSpawner : MonoBehaviour
 
     void AssignItemsPosition(Slot slot, ClickeableItem[] items)
     {
-        float margin = 0.30f;
-        float slotHalfWidth = slot.Size.x / 2f;
-        float slotHalfHeight = slot.Size.y / 2f;
+        // Sprite pixel_per_unit
+        int PPU = 16;
+        // Distance between items in pixels
+        float pixelMargin = 3;
+        // Inner slot margin in pixels
+        float innerPixelMargin = 2;
+
+        float worldMargin = pixelMargin / PPU;
+        float innerWorldMargin = innerPixelMargin / PPU;
+
+        float slotHalfW = slot.Size.x / 2f;
+        float slotHalfH = slot.Size.y / 2f;
 
         for (int i = 0; i < items.Length; i++)
         {
             SpriteRenderer sr = items[i].GetComponent<SpriteRenderer>();
 
             // Random rotation
-            float rotation = (Random.Range(0, 100) > 60) ? 90f * Random.Range(1, 4) : 0f;
-            items[i].transform.rotation = Quaternion.Euler(0f, 0f, rotation);
-            items[i].SetIsAxisRotated(rotation == 90f || rotation == 270f);
+            float rot = (Random.Range(0, 100) > 60) ? 90f * Random.Range(1, 4) : 0f;
+            items[i].transform.rotation = Quaternion.Euler(0, 0, rot);
+            items[i].SetIsAxisRotated(rot == 90f || rot == 270f);
 
-            // Sprite size
-            float halfWidth = sr.bounds.size.x / 2f;
-            float halfHeight = sr.bounds.size.y / 2f;
+            // Sprite world size
+            float halfW = sr.bounds.size.x / 2f;
+            float halfH = sr.bounds.size.y / 2f;
 
             // Swap if rotated
             if (items[i].GetIsAxisRotated())
             {
-                float tmp = halfWidth;
-                halfWidth = halfHeight;
-                halfHeight = tmp;
+                float t = halfW;
+                halfW = halfH;
+                halfH = t;
             }
 
-            // Allowed placement area
-            float maxX = slotHalfWidth - halfWidth - margin;
-            float maxY = slotHalfHeight - halfHeight - margin;
+            // Allowed placement region
+            float maxX = slotHalfW - halfW - worldMargin - innerWorldMargin;
+            float maxY = slotHalfH - halfH - worldMargin - innerWorldMargin;
 
             Vector2 pos = Vector2.zero;
             bool valid = false;
@@ -119,27 +128,29 @@ public class ItemSpawner : MonoBehaviour
 
             while (!valid && attempts < 200)
             {
-                pos = new Vector2(Random.Range(-maxX, maxX), Random.Range(-maxY, maxY));
+                pos = new Vector2(Random.Range(-maxX, maxX),
+                                  Random.Range(-maxY, maxY));
+
                 valid = true;
 
                 // Check overlap with previous items
                 for (int j = 0; j < i; j++)
                 {
-                    ClickeableItem other = items[j];
-                    SpriteRenderer otherSR = other.GetComponent<SpriteRenderer>();
+                    SpriteRenderer otherSR = items[j].GetComponent<SpriteRenderer>();
+
                     float otherHalfW = otherSR.bounds.size.x / 2f;
                     float otherHalfH = otherSR.bounds.size.y / 2f;
-                    if (other.GetIsAxisRotated())
+
+                    if (items[j].GetIsAxisRotated())
                     {
-                        float tmp = otherHalfW;
+                        float t = otherHalfW;
                         otherHalfW = otherHalfH;
-                        otherHalfH = tmp;
+                        otherHalfH = t;
                     }
 
-                    bool overlapX = Mathf.Abs(pos.x - other.transform.localPosition.x) < (halfWidth + otherHalfW + margin);
-                    bool overlapY = Mathf.Abs(pos.y - other.transform.localPosition.y) < (halfHeight + otherHalfH + margin);
-
-                    if (overlapX && overlapY)
+                    // Separation test with margin
+                    if (Mathf.Abs(pos.x - items[j].transform.localPosition.x) < (halfW + otherHalfW + worldMargin) &&
+                        Mathf.Abs(pos.y - items[j].transform.localPosition.y) < (halfH + otherHalfH + worldMargin))
                     {
                         valid = false;
                         break;
@@ -149,10 +160,13 @@ public class ItemSpawner : MonoBehaviour
                 attempts++;
             }
 
+            // Assign final position
             items[i].transform.SetParent(slot.transform, false);
             items[i].transform.localPosition = pos;
         }
     }
+
+
 
     public void AssignItemsDesign()
     {

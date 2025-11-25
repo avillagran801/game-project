@@ -12,11 +12,11 @@ public class GameManager : MonoBehaviour
     private ClickeableItem leftClickedItem;
     private ClickeableItem rightClickedItem;
     private bool isPlaying = true;
-    private float animationInterval = 3f; // 2.5f;
+    private float animationInterval = 4f; // 2.5f;
     private float animationTimer = 0f;
     private int score = 0;
-    private float startingTime = 15f;
-    private float addTime = 2f;
+    private float startingTime = 20f;
+    private float addTime = 3f;
     private float maxTime = 60f;
     private float remainingTime;
 
