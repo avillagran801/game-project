@@ -127,7 +127,7 @@ public class GameManager : MonoBehaviour
     void AddPoints()
 
     {
-        Vibrate(100);
+        SoundManager.Instance.VibrateMedium();
         SoundManager.Instance.PlayScoreEffect();
 
         // Add 1 point to the score and 5 seconds to the remaining time
@@ -188,15 +188,9 @@ public class GameManager : MonoBehaviour
             /*
             else
             {
-                //SoundManager.Instance.PlayEffect(incorrectSound);
+
             }
             */
         }
     }
-
-    public static void Vibrate(long milliseconds)
-    {
-
-    }
-
 }

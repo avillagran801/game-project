@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8bff4bddabfd134e9f68ddd7729e2c0, type: 3}
   m_Name: IconPack3
   m_EditorClassIdentifier: Assembly-CSharp::IconPack
-  packName: rock
-  price: 100
+  packName: waterPlants
+  price: 50
   iconSprites:
   - {fileID: 243482843934625900, guid: ef1b99e34ff27cc40a8fdf3543b8b1a4, type: 3}
   - {fileID: 7395775849409967359, guid: ef1b99e34ff27cc40a8fdf3543b8b1a4, type: 3}

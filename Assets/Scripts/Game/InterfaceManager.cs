@@ -14,6 +14,7 @@ public class InterfaceManager : MonoBehaviour
     public TextMeshProUGUI gameOverScoreText;
     public Slider effectsSlider;
     public Slider musicSlider;
+    public Slider vibrationSlider;
     private static InterfaceManager _instance;
     void Awake()
     {
@@ -30,6 +31,7 @@ public class InterfaceManager : MonoBehaviour
     {
         effectsSlider.value = SoundManager.Instance.soundSettings.effectsVolume;
         musicSlider.value = SoundManager.Instance.soundSettings.musicVolume;
+        vibrationSlider.value = SoundManager.Instance.soundSettings.vibrationIntensity;
     }
 
     public void OpenPause()
@@ -122,6 +124,11 @@ public class InterfaceManager : MonoBehaviour
     public void OnMusicSliderValueChanged(float value)
     {
         SoundManager.Instance.ChangeMusicVolume(value);
+    }
+
+    public void OnVibrationSliderValueChanged(float value)
+    {
+        SoundManager.Instance.ChangeVibrationIntensity(value);
     }
 
 }

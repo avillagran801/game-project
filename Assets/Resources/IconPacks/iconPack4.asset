@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8bff4bddabfd134e9f68ddd7729e2c0, type: 3}
-  m_Name: iconPack1
+  m_Name: iconPack4
   m_EditorClassIdentifier: Assembly-CSharp::IconPack
   packName: oreNGems
-  price: 300
+  price: 100
   iconSprites:
   - {fileID: 2335828927570728947, guid: 6029d1b0c1e5b0e41819de8826c98aa8, type: 3}
   - {fileID: 2102719323161831179, guid: 6029d1b0c1e5b0e41819de8826c98aa8, type: 3}
