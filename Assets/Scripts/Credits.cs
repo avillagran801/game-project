@@ -30,26 +30,33 @@ public class Credits : MonoBehaviour
     {
         creditPages.Add(new CreditPage(
             "Game development",
-            "Game developed by Ana Villagran (avillagran801 on Github)\n\n" +
+            "Game developed by Ana Villagran (avillagran801 on GitHub) for the UdeC Mobile Game Development course of 2025-2\n\n" +
             "Based on the card game Dobble®"
+        ));
+
+        creditPages.Add(new CreditPage(
+            "Special thanks",
+            "To my teachers Erich Grüttner and Fabian Cid for their advice and technical knowledge\n\n" +
+            "To my boyfriend Bastian Cabrera for all his support\n\n" +
+            "And to my dear classmates for all the laughs"
         ));
 
         creditPages.Add(new CreditPage(
             "Sprites credits",
             "Sprout Lands UI Pack by Cup Nooble\n\n" +
-            "Found on https://cupnooble.itch.io/sprout-lands-ui-pack"
+            "Found on cupnooble.itch.io/sprout-lands-ui-pack"
         ));
 
         creditPages.Add(new CreditPage(
             "Sprites credits",
             "Hana Caraka Series by Otterisk\n\n" +
-            "Found on https://itch.io/c/3569702/hana-caraka-series"
+            "Found on itch.io/c/3569702/hana-caraka-series"
         ));
 
         creditPages.Add(new CreditPage(
             "Music credits",
             "Manuel Graf - M.Sc. Media Informatics - Munich,Germany - manuelgraf.com- mg@apfelkuh\n\n" +
-            "Found on https://freesound.org/people/ManuelGraf/sounds/410574/"
+            "Found on freesound.org/people/ManuelGraf/sounds/410574/"
         ));
 
         backButton.GetComponent<Button>().interactable = false;
