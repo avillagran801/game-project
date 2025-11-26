@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
 
     public void OnPause()
     {
-        SoundManager.Instance.StopGameMusic();
+        SoundManager.Instance.PlayMenuMusic();
         isPlaying = false;
     }
 
@@ -89,6 +89,8 @@ public class GameManager : MonoBehaviour
 
         // Restart the items positions, score and timer just like in the start function
         isPlaying = true;
+
+        RestartSelectedItems();
         spawner.SpawnItems();
 
         score = 0;
@@ -100,7 +102,7 @@ public class GameManager : MonoBehaviour
 
     public void OnGameOver()
     {
-        SoundManager.Instance.StopGameMusic();
+        SoundManager.Instance.PlayMenuMusic();
         SoundManager.Instance.PlayGameOverEffect();
 
         // When the time is over, save the score and open the Game Over screen
@@ -147,11 +149,7 @@ public class GameManager : MonoBehaviour
             remainingTime = maxTime;
         }
 
-        leftClickedItem.SetBorder(false);
-        rightClickedItem.SetBorder(false);
-
-        leftClickedItem = null;
-        rightClickedItem = null;
+        RestartSelectedItems();
     }
 
     void IncorrectPair()
@@ -168,6 +166,11 @@ public class GameManager : MonoBehaviour
             remainingTime = 0f;
         }
 
+        RestartSelectedItems();
+    }
+
+    void RestartSelectedItems()
+    {
         leftClickedItem.SetBorder(false);
         rightClickedItem.SetBorder(false);
 

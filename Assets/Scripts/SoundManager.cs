@@ -38,6 +38,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip gameOverSound;
     public AudioClip buySound;
     public AudioClip gameMusic;
+    public AudioClip menuMusic;
     private string settingsPath;
     private AudioSource effectsSource;
     private AudioSource musicSource;
@@ -272,6 +273,8 @@ public class SoundManager : MonoBehaviour
 
     public void PlayGameMusic()
     {
+        musicSource.Stop();
+
         if (gameMusic == null)
         {
             Debug.LogWarning("No gameMusic AudioClip assigned!");
@@ -283,7 +286,22 @@ public class SoundManager : MonoBehaviour
         musicSource.Play();
     }
 
-    public void StopGameMusic()
+    public void PlayMenuMusic()
+    {
+        musicSource.Stop();
+
+        if (menuMusic == null)
+        {
+            Debug.LogWarning("No menuMusic AudioClip assigned!");
+            return;
+        }
+
+        musicSource.clip = menuMusic;
+        musicSource.loop = true;
+        musicSource.Play();
+    }
+
+    public void StopMusic()
     {
         musicSource.Stop();
     }

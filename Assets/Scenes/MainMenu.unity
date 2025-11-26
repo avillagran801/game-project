@@ -1440,6 +1440,7 @@ MonoBehaviour:
   gameOverSound: {fileID: 8300000, guid: 2711d06505ae7d145bb0b1c46cd1cb7c, type: 3}
   buySound: {fileID: 8300000, guid: 8b651c7053816744c89574b5552540f2, type: 3}
   gameMusic: {fileID: 8300000, guid: d7f03a9cae6292a48886baa1b91c43ff, type: 3}
+  menuMusic: {fileID: 8300000, guid: 9746ca8d5b250834f93c29f21bf7084d, type: 3}
 --- !u!4 &948990925
 Transform:
   m_ObjectHideFlags: 0

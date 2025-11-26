@@ -3,6 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    void Start()
+    {
+        SoundManager.Instance.PlayMenuMusic();
+    }
     public void PlayGame()
     {
         SoundManager.Instance.PlaySelectEffect();

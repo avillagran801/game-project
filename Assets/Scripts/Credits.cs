@@ -42,7 +42,7 @@ public class Credits : MonoBehaviour
         ));
 
         creditPages.Add(new CreditPage(
-            "Sprites credits",
+            "Sprites and font credits",
             "Sprout Lands UI Pack by Cup Nooble\n\n" +
             "Found on cupnooble.itch.io/sprout-lands-ui-pack"
         ));
@@ -56,7 +56,8 @@ public class Credits : MonoBehaviour
         creditPages.Add(new CreditPage(
             "Music credits",
             "Manuel Graf - M.Sc. Media Informatics - Munich,Germany - manuelgraf.com- mg@apfelkuh\n\n" +
-            "Found on freesound.org/people/ManuelGraf/sounds/410574/"
+            "Found on freesound.org/people/ManuelGraf/sounds/410574/ and \n" +
+            "freesound.org/people/ManuelGraf/sounds/410576/"
         ));
 
         backButton.GetComponent<Button>().interactable = false;
