@@ -15,9 +15,9 @@ MonoBehaviour:
   packName: waterPlants
   price: 25
   iconSprites:
-  - {fileID: 243482843934625900, guid: ef1b99e34ff27cc40a8fdf3543b8b1a4, type: 3}
+  - {fileID: -8669477431852842222, guid: ef1b99e34ff27cc40a8fdf3543b8b1a4, type: 3}
   - {fileID: 7395775849409967359, guid: ef1b99e34ff27cc40a8fdf3543b8b1a4, type: 3}
-  - {fileID: -4170274354514094066, guid: 3f56e956edd30d248aff0c165a34cad2, type: 3}
+  - {fileID: -2370270563623752158, guid: 3f56e956edd30d248aff0c165a34cad2, type: 3}
   - {fileID: -5641962252066474568, guid: 3f56e956edd30d248aff0c165a34cad2, type: 3}
   - {fileID: 8806556967682631439, guid: a001571845459cb4f9d0e1c2868ce014, type: 3}
   - {fileID: 1948713186, guid: a001571845459cb4f9d0e1c2868ce014, type: 3}

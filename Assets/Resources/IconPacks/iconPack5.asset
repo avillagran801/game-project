@@ -15,11 +15,11 @@ MonoBehaviour:
   packName: fish
   price: 40
   iconSprites:
-  - {fileID: 7704282712893456000, guid: 29c2249cd00b54c4f9ecbb3c88d7942e, type: 3}
+  - {fileID: -1181076974519126152, guid: 29c2249cd00b54c4f9ecbb3c88d7942e, type: 3}
   - {fileID: -1915776564401465818, guid: 29c2249cd00b54c4f9ecbb3c88d7942e, type: 3}
   - {fileID: -8217542319786499577, guid: 29c2249cd00b54c4f9ecbb3c88d7942e, type: 3}
   - {fileID: 9156854346723684101, guid: 29c2249cd00b54c4f9ecbb3c88d7942e, type: 3}
   - {fileID: -3878289797822314810, guid: 29c2249cd00b54c4f9ecbb3c88d7942e, type: 3}
   - {fileID: 6406061711972274550, guid: 29c2249cd00b54c4f9ecbb3c88d7942e, type: 3}
   - {fileID: 900668292290427548, guid: 29c2249cd00b54c4f9ecbb3c88d7942e, type: 3}
-  - {fileID: -1181076974519126152, guid: 29c2249cd00b54c4f9ecbb3c88d7942e, type: 3}
+  - {fileID: 7704282712893456000, guid: 29c2249cd00b54c4f9ecbb3c88d7942e, type: 3}
