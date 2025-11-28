@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class TutorialPage
 {
@@ -25,8 +26,13 @@ public class Tutorial : MonoBehaviour
     public GameObject backButton;
     public GameObject playButton;
     public GameObject gameIconsExplanation;
+    public GameObject leftCircle;
+    public GameObject rightCircle;
     private List<TutorialPage> tutorialPages = new List<TutorialPage>();
     private int currentIndex = 0;
+    private float animationInterval = 0.5f;
+    private float animationTimer = 0f;
+    private bool visibleCircle = true;
 
     void Start()
     {
@@ -52,13 +58,40 @@ public class Tutorial : MonoBehaviour
 
         tutorialPages.Add(new TutorialPage(
             "How to play",
-            "Each time you score a maqui point, 5 extra seconds are added to the countdown." + "\n\n" +
+            "Each time you score a maqui point, 2 extra seconds are added to the countdown." + "\n\n" +
             "But watch out, the game ends when time runs out!"
         ));
 
 
         backButton.GetComponent<Button>().interactable = false;
         ShowPage(0);
+
+        leftCircle.SetActive(visibleCircle);
+        rightCircle.SetActive(!visibleCircle);
+    }
+
+    void Update()
+    {
+        if (currentIndex != 2)
+        {
+            return;
+        }
+
+        animationTimer += Time.deltaTime;
+
+        if (animationInterval <= animationTimer)
+        {
+            animationTimer = 0f;
+            CircleBlinkEffect();
+        }
+    }
+
+    void CircleBlinkEffect()
+    {
+        visibleCircle = !visibleCircle;
+
+        leftCircle.SetActive(visibleCircle);
+        rightCircle.SetActive(!visibleCircle);
     }
 
     public void ShowPage(int index)
