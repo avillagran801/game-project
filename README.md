@@ -1,0 +1,27 @@
+## GAME STORY
+
+After a strong earthquake in the south of the country, your little farm has ended up completely upside down: the cows are next to the lettuces and your shoes are right next to the eggs. What a mess!
+
+To make things easier for yourself and assess the damage, your mission is to group every pair of items you come across as quickly as possible.
+
+
+## ABOUT THE GAME
+
+Farm Shuffle is an Android developed on Unity for the UdeC Mobile Game Development course of 2025-2.
+
+It's based on the card game Dobble and has a cozy pixel art aeshtetic inspired on Stardew Valley.
+
+
+## SPECIAL THANKS
+
+To my teachers Erich Gruttner and Fabian Cid for their advice and technical knowledge, to my boyfriend Bastian Cabrera for all his support, and to my dear classmates for all the laughs.
+
+## CREDITS
+
+### SPRITES AND FONT CREDITS
+
+* Sprout Lands UI Pack by Cup Nooble, found on [cupnooble.itch.io/sprout-lands-ui-pack](cupnooble.itch.io/sprout-lands-ui-pack) .
+* Hana Caraka Series by Otterisk, found on [itch.io/c/3569702/hana-caraka-series](itch.io/c/3569702/hana-caraka-series) .
+
+### MUSIC CREDITS
+* Manuel Graf - M.Sc. Media Informatics - Munich,Germany - manuelgraf.com- mg@apfelkuh, found on [freesound.org/people/ManuelGraf/sounds/410574/](freesound.org/people/ManuelGraf/sounds/410574/) and [freesound.org/people/ManuelGraf/sounds/410576/](freesound.org/people/ManuelGraf/sounds/410576/) .
