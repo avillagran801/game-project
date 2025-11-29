@@ -12,7 +12,7 @@ Farm Shuffle is an Android developed on Unity for the UdeC Mobile Game Developme
 
 It's based on the card game Dobble and has a cozy pixel art aeshtetic inspired on Stardew Valley.
 
-**You can automatically download it [here](https://github.com/avillagran801/farm-shuffle-game/releases/download/v1.0.0/FarmShuffle-1.0.0.apk) .**
+**You can automatically download it [HERE](https://github.com/avillagran801/farm-shuffle-game/releases/download/v1.0.0/FarmShuffle-1.0.0.apk) .**
 
 ![HowToPlay](https://github.com/user-attachments/assets/f80d2d91-5f0c-46b2-a78b-889623cf7345)
 
@@ -26,8 +26,8 @@ To my teachers Erich Gruttner and Fabian Cid for their advice and technical know
 
 ### SPRITES AND FONT CREDITS
 
-* Sprout Lands UI Pack by Cup Nooble, found on [cupnooble.itch.io/sprout-lands-ui-pack](cupnooble.itch.io/sprout-lands-ui-pack) .
-* Hana Caraka Series by Otterisk, found on [itch.io/c/3569702/hana-caraka-series](itch.io/c/3569702/hana-caraka-series) .
+* Sprout Lands UI Pack by Cup Nooble, found on [https://cupnooble.itch.io/sprout-lands-ui-pack](https://cupnooble.itch.io/sprout-lands-ui-pack) .
+* Hana Caraka Series by Otterisk, found on [https://itch.io/c/3569702/hana-caraka-series](https://itch.io/c/3569702/hana-caraka-series) .
 
 ### MUSIC CREDITS
-* Manuel Graf - M.Sc. Media Informatics - Munich,Germany - manuelgraf.com- mg@apfelkuh, found on [freesound.org/people/ManuelGraf/sounds/410574/](freesound.org/people/ManuelGraf/sounds/410574/) and [freesound.org/people/ManuelGraf/sounds/410576/](freesound.org/people/ManuelGraf/sounds/410576/) .
+* Manuel Graf - M.Sc. Media Informatics - Munich,Germany - manuelgraf.com- mg@apfelkuh, found on [https://freesound.org/people/ManuelGraf/sounds/410574/](https://freesound.org/people/ManuelGraf/sounds/410574/) and [https://freesound.org/people/ManuelGraf/sounds/410576/](https://freesound.org/people/ManuelGraf/sounds/410576/) .
